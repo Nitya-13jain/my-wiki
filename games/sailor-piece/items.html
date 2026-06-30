@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Items Database | Sailor Piece Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/wiki.css">
+<style>
+/* Secret rarity – not in base wiki.css */
+.badge-secret { background: rgba(236,72,153,.12); color: #f472b6; border: 1px solid #ec4899; }
+.item-name { font-weight:700; color:#fff; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">⚓ Sailor <span>Piece</span></div>
+  <button id="sidebar-toggle">☰ Menu</button>
+</div>
+<div class="wiki-shell">
+  <aside class="sidebar-left" id="sidebar-left">
+    <a href="../../index.html" class="hub-back">← All Games</a>
+    <a class="brand-box" href="index.html">
+      <div class="brand-icon">⚓</div>
+      <div><div class="brand-title">Sailor Piece</div><div class="brand-sub">Wiki v2 • June 2025</div></div>
+    </a>
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input id="wiki-search" class="search-input" type="search" placeholder="Search wiki…  (/)" autocomplete="off">
+      <div class="search-results" id="search-results"></div>
+    </div>
+    <div class="nav-group-label">Database</div>
+    <ul class="nav-list">
+      <li><a href="index.html"><span class="nav-ico">⚓</span>Wiki Home</a></li>
+      <li><a href="races.html"><span class="nav-ico">🧬</span>Races</a></li>
+      <li><a href="clans.html"><span class="nav-ico">🔥</span>Clans</a></li>
+      <li><a href="bloodlines.html"><span class="nav-ico">🩸</span>Bloodlines</a></li>
+      <li><a href="fruits.html"><span class="nav-ico">🍇</span>Devil Fruits</a></li>
+      <li><a href="swords.html"><span class="nav-ico">⚔️</span>Swords</a></li>
+      <li><a href="melee.html"><span class="nav-ico">👊</span>Fighting Styles</a></li>
+      <li><a href="codes.html"><span class="nav-ico">🎁</span>Codes</a></li>
+    </ul>
+    <div class="nav-group-label">Tools</div>
+    <ul class="nav-list"><li><a href="codes.html"><span class="nav-ico">🎁</span>Active Codes</a></li></ul>
+    <div class="nav-footer">Fan-made Sailor Piece Wiki.<br>Not affiliated with Roblox.<br><br>v2.0 • Dark Emerald theme</div>
+  </aside>
+
+  <main class="main-col">
+    <div class="breadcrumbs"><a href="index.html">Wiki Home</a> / Items</div>
+    <article class="article">
+<h1>Items Database</h1>
+<p class="subtitle">Complete drop rates, obtainment methods, and crafting utilities for all materials, keys, chests and consumables.</p>
+<div class="editors-note"><strong>Note:</strong> This page is NOT yet wired into the wiki navigation or search – add the Items link to the sidebar in the other pages, add a hub card to <code>index.html</code>, then run <code>python3 rebuild_search.py</code> after adding <code>.item-name</code> to the search selector, as shown in the Relics tutorial.</div>
+
+<h2 class="section-title">Common Items <span class="rarity-badge badge-common">Common</span></h2>
+<table class="db-table">
+<thead><tr><th style="width:22%">Name</th><th style="width:40%">Obtainment</th><th style="width:38%">Utility</th></tr></thead>
+<tbody>
+    <tr>
+      <td class="item-name">Common Chest</td>
+      <td>1.8% drop rate from every NPC.</td>
+      <td>Can be opened to obtain coins and gems.</td>
+    </tr>
+    <tr>
+      <td class="item-name">Wood</td>
+      <td>5-7% drop rate from every NPC.</td>
+      <td>Enchanting and Blessing.</td>
+    </tr>
+    <tr>
+      <td class="item-name">Common Loot</td>
+      <td>A glitched item left from testing, it can occasionally be obtainable on new updates. Currently, it can be obtained from the Spirit Warrior boss.</td>
+      <td>None.</td>
+    </tr>
+</tbody>
+</table>
+
+<h2 class="section-title">Rare Items <span class="rarity-badge badge-rare">Rare</span></h2>
+<table class="db-table">
+<thead><tr><th style="width:22%">Name</th><th style="width:40%">Obtainment</th><th style="width:38%">Utility</th></tr></thead>
+<tbody>
+    <tr>
+      <td class="item-name">Energy Core</td>
+      <td>25% drop rate from Cursed Vessel Boss.</td>
+      <td>Crafting Cursed Vessel (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Haki Color Reroll</td>
+      <td>2-3% drop rate from minibosses, &gt;30% drop rate from world bosses.</td>
+      <td>Can be used to reroll Haki particle color.</td>
+    </tr>
+    <tr>
+      <td class="item-name">Iron</td>
+      <td>2-4% drop rate from every NPC besides the ones at Starter Island.</td>
+      <td>Enchanting and Blessing</td>
+    </tr>
+    <tr>
+      <td class="item-name">Rare Chest</td>
+      <td>0.8% drop rate from every NPC.</td>
+      <td>Can be opened to obtain coins, gems, and common to rare items.</td>
+    </tr>
+</tbody>
+</table>
+
+<h2 class="section-title">Epic Items <span class="rarity-badge badge-epic">Epic</span></h2>
+<table class="db-table">
+<thead><tr><th style="width:22%">Name</th><th style="width:40%">Obtainment</th><th style="width:38%">Utility</th></tr></thead>
+<tbody>
+    <tr>
+      <td class="item-name">Abyss Edge</td>
+      <td>17.5% drop rate from Solo Hunter</td>
+      <td>Crafting Solo Hunter (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Awakened Cursed Finger</td>
+      <td>15% drop rate from Strongest In History</td>
+      <td>Consumed to craft Strongest In History (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Battle Shard</td>
+      <td>16% drop from Ice Queen Boss</td>
+      <td>Crafting Ice Queen (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Black Shard</td>
+      <td>51% drop from Black Reaper Boss</td>
+      <td>Crafting Black Reaper (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Boss Key</td>
+      <td>Drops from doing any NPC quest or chests</td>
+      <td>Spawning either Knight, Qin Shi or Soul Reaper at Boss Island</td>
+    </tr>
+    <tr>
+      <td class="item-name">Boss Ticket</td>
+      <td>Obtained from all Bosses(Not Mini-Bosses)</td>
+      <td>Buying Excalibur (Sword), Qin Shi (Melee) or Soul Reaper (Sword) at Boss Island</td>
+    </tr>
+    <tr>
+      <td class="item-name">Broken Sword</td>
+      <td>Dropped from any NPC holding swords</td>
+      <td>Crafting Divine Grails and Babylon Keys at Boss Island</td>
+    </tr>
+    <tr>
+      <td class="item-name">Cosmic Essence</td>
+      <td>34.93% drop rate from Cosmic Being (Boss)</td>
+      <td>Crafting Cosmic Being (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Cursed Finger</td>
+      <td>20% drop rate from Curse King Boss</td>
+      <td>Crafting Curse King (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Demon Remnant</td>
+      <td>13% drop rate from Moon Slayer boss</td>
+      <td>Crafting Moon Slayer (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Demon Fragment</td>
+      <td>44.00% drop rate from Demon King (Boss)</td>
+      <td>Crafting Demon King (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Divine Fragment</td>
+      <td>Nothing so far...</td>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <td class="item-name">Divine Remnant</td>
+      <td>52% drop rate from Sun God (Boss)</td>
+      <td>Crafting Sun God (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Dungeon Key</td>
+      <td>Drops from most NPCs (around 40-60%)</td>
+      <td>Opening Dungeons</td>
+    </tr>
+    <tr>
+      <td class="item-name">Dungeon Token</td>
+      <td>Reward of completing Dungeons</td>
+      <td>Buying items on the Dungeon Merchant</td>
+    </tr>
+    <tr>
+      <td class="item-name">Easter Egg</td>
+      <td>Bunny NPC at Easter island(Limited Time Event)</td>
+      <td>Crafting Great Mage (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Epic Chest</td>
+      <td>0.45% drop rate from every NPC.</td>
+      <td>Drops money, gems and other items when opened.</td>
+    </tr>
+    <tr>
+      <td class="item-name">Flash Impact</td>
+      <td>9% drop rate from Cursed Vessel (Boss)</td>
+      <td>Crafting Cursed Vessel (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Frost Will</td>
+      <td>17.89% drop rate from Yamato (Boss)</td>
+      <td>Crafting Yamato (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Illusion Prism</td>
+      <td>8% drop rate from Manipulator (Boss)</td>
+      <td>Crafting Manipulator (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Limitless Key</td>
+      <td>30% drop rate from Limitless Sorcerer boss on Shibuya Station, 0.6% from Strong Sorcerer on Shinjuku Island</td>
+      <td>Spawning Strongest Of Today.</td>
+    </tr>
+    <tr>
+      <td class="item-name">Limitless Ring</td>
+      <td>8% drop rate from Limitless Sorcerer boss at Shibuya Station</td>
+      <td>Crafting Limitless Sorcerer (Melee) and getting Ascension II</td>
+    </tr>
+    <tr>
+      <td class="item-name">Magic Shard</td>
+      <td>13% drop rate from Atomic Boss</td>
+      <td>Crafting Atomic (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Malevolent Key</td>
+      <td>30% drop rate from Curse King on Shibuya Station / 0.6% drop rate from Curse on Shinjuku island</td>
+      <td>Spawning Strongest in History (Boss)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Mirage Pendant</td>
+      <td>20% drop rate from Manipulator</td>
+      <td>Crafting Manipulator (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Monarch Core</td>
+      <td>6.75–12% drop rate from Shadow Monarch</td>
+      <td>Crafting Shadow Monarch (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Morgan Remnant</td>
+      <td>43.74-68.04% drop rate from Corrupted Excalibur (Boss)</td>
+      <td>Crafting Corrupted Excalibur (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Obsidian</td>
+      <td>1-2% chance from enemy mobs in Desert Island and above</td>
+      <td>Enchanting and Blessing</td>
+    </tr>
+    <tr>
+      <td class="item-name">Power Fragment</td>
+      <td>39.92% drop rate from The World (Boss)</td>
+      <td>Crafting The World (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Power Remnant</td>
+      <td>4.93% drop rate from Strongest Shinobi Boss</td>
+      <td>Crafting Strongest Shinobi (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Race Reroll</td>
+      <td>Drops from any NPC and Codes</td>
+      <td>Rerolling Races</td>
+    </tr>
+    <tr>
+      <td class="item-name">Raid Coin</td>
+      <td>Reward of completing Raids</td>
+      <td>Buying Mythical items from the Raid Merchant</td>
+    </tr>
+    <tr>
+      <td class="item-name">Reversal Pulse</td>
+      <td>15–25% drop rate from Strongest Of Today</td>
+      <td>Crafting Strongest Of Today (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Rush Coin</td>
+      <td>Reward of completing Boss Rush</td>
+      <td>Used to upgrade Boss Rush stats and buying items from the Boss Rush Merchant</td>
+    </tr>
+    <tr>
+      <td class="item-name">Sage Pulse</td>
+      <td>13.5–22.5% drop rate from Demon Lord (Boss)</td>
+      <td>Crafting Slime (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Slime Key</td>
+      <td>Exchange Slime Shards at Slime Island</td>
+      <td>Spawning Demon Lord (Boss)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Soul Fragment</td>
+      <td>29.16% drop rate from Soul Reaper (Boss)</td>
+      <td>Crafting Soul Reaper (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Spell Echo</td>
+      <td>15.68-23.76% drop rate from Great Mage Boss</td>
+      <td>Crafting Great Mage (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Throne Remnant</td>
+      <td>11.5% Base Chance to be obtained from King Of Heroes (Boss)</td>
+      <td>Crafting King Of Heroes (Melee).</td>
+    </tr>
+    <tr>
+      <td class="item-name">Tide Remnant</td>
+      <td>9.5% drop rate from Blessed Maiden</td>
+      <td>Crafting Blessed Maiden (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Tower Token</td>
+      <td>Reward of clearing floors in Infinite Tower</td>
+      <td>Buy various items from the Tower Merchant</td>
+    </tr>
+    <tr>
+      <td class="item-name">Trait Reroll</td>
+      <td>Drops from most NPCs</td>
+      <td>Rerolling Traits</td>
+    </tr>
+    <tr>
+      <td class="item-name">Umbral Capsule</td>
+      <td>12.5–35% drop rate from Shadow Boss</td>
+      <td>Crafting Shadow (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Vessel Ring</td>
+      <td>6–8% drop rate from Strongest In History (Boss)</td>
+      <td>Crafting Strongest In History (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Void Fragment</td>
+      <td>20% drop rate from Limitless Sorcerer (Boss)</td>
+      <td>Crafting Limitless Sorcerer (Melee) and getting Ascension II</td>
+    </tr>
+    <tr>
+      <td class="item-name">Worthiness Fragment</td>
+      <td>5% drop rate from Hollow NPCs</td>
+      <td>Used in the Manipulator Trainer questline</td>
+    </tr>
+</tbody>
+</table>
+
+<h2 class="section-title">Legendary Items <span class="rarity-badge badge-legendary">Legendary</span></h2>
+<table class="db-table">
+<thead><tr><th style="width:22%">Name</th><th style="width:40%">Obtainment</th><th style="width:38%">Utility</th></tr></thead>
+<tbody>
+    <tr>
+      <td class="item-name">Abyss Sigil</td>
+      <td>10% Chance to drop from Ninja Island/Lawless Island Npcs</td>
+      <td>Crafting Atomic (Sword) and summoning the Atomic Boss</td>
+    </tr>
+    <tr>
+      <td class="item-name">Alter Essence</td>
+      <td>5% drop rate from Corrupted Knight</td>
+      <td>Crafting Corrupted Excalibur (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Ancient Fragment</td>
+      <td>TBA% drop rate from Great Mage Boss</td>
+      <td>Crafting Great Mage (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Ancient Shard</td>
+      <td>4.5%-6.5% drop rate from King Of Heroes Boss</td>
+      <td>Crafting King Of Heroes (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Battle Sigil</td>
+      <td>3% base drop rate from Strongest Shinobi Boss</td>
+      <td>Crafting Strongest Shinobi (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Bloodline Stone</td>
+      <td>N/A Drop Chance from any Enemy in Sea 2, 100% chance to drop 15-30 from Sea Serpents and Krakens</td>
+      <td>Obtaining Bloodlines</td>
+    </tr>
+    <tr>
+      <td class="item-name">Blue Singularity</td>
+      <td>2% – 3% drop rate from Strongest Of Today</td>
+      <td>Crafting Strongest Of Today (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Calamity Seal</td>
+      <td>Dropped from Enemies and Bosses</td>
+      <td>Spawning Demon King (Boss)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Chrysalis Sigil</td>
+      <td>Dropped from Quincy NPCs at Soul Dominion</td>
+      <td>Spawning True Manipulator and crafting True Manipulator (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Clan Reroll</td>
+      <td>Drop from Enemies, Bosses, as well as from Chests and Infinite Tower and Codes</td>
+      <td>Rolling Clans</td>
+    </tr>
+    <tr>
+      <td class="item-name">Crystal Coin</td>
+      <td>Reward of clearing floor of Crystal Defense</td>
+      <td>Used to buy things at Defense Merchant</td>
+    </tr>
+    <tr>
+      <td class="item-name">Crystal Key</td>
+      <td>Any NPC from Sea 2</td>
+      <td>Starting Crystal Defense</td>
+    </tr>
+    <tr>
+      <td class="item-name">Cursed Talisman</td>
+      <td>Dropped from Curse NPCs</td>
+      <td>Crafting Shrine Domain Shard for the Strongest In History (Melee) Domain</td>
+    </tr>
+    <tr>
+      <td class="item-name">Dark Grail</td>
+      <td>Any NPC above Ninja Island</td>
+      <td>Spawning Corrupted Knight</td>
+    </tr>
+    <tr>
+      <td class="item-name">Dark Ring</td>
+      <td>7% drop rate from Solo Hunter boss</td>
+      <td>Crafting Solo Hunter (Sword) and getting Ascension III</td>
+    </tr>
+    <tr>
+      <td class="item-name">Demonic Shard</td>
+      <td>TBA% Drop Chance from Demon King</td>
+      <td>Crafting Demon King (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Dismantle Fang</td>
+      <td>8% drop rate from Curse King boss</td>
+      <td>Crafting Curse King (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Divergent Pulse</td>
+      <td>4% drop rate from Cursed Vessel boss on Shibuya Station</td>
+      <td>Crafting Cursed Vessel (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Divine Grail</td>
+      <td>Using 3x Broken Sword in the Divine Grail Crafter</td>
+      <td>Spawning King Of Heroes</td>
+    </tr>
+    <tr>
+      <td class="item-name">Divinity Essence</td>
+      <td>6.5% drop rate from True Manipulator boss on Soul Dominion</td>
+      <td>Crafting True Manipulator (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Dominion Brand</td>
+      <td>Drops from NPCs at Bizarre Island</td>
+      <td>Crafting The World (Melee) and spawning The World (Boss)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Easter Key</td>
+      <td>Drops from Bunny NPCs with very low chance</td>
+      <td>Spawning Great Mage (Boss)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Energy Shard</td>
+      <td>TBA% drop rate from Strong Sorcerer</td>
+      <td>Crafting Infinity Domain Shard for the Strongest Of Today (Melee) Domain</td>
+    </tr>
+    <tr>
+      <td class="item-name">Flame Pulse</td>
+      <td>26% drop rate from Sun God Boss</td>
+      <td>Crafting Sun God (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Frost Relic</td>
+      <td>Drops from NPCs at Shibuya Station and above</td>
+      <td>Crafting Ice Queen (Sword) and spawning Ice Queen Boss</td>
+    </tr>
+    <tr>
+      <td class="item-name">Fusion Ring</td>
+      <td>TBA% drop rate from True Manipulator</td>
+      <td>Crafting True Manipulator (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Gale Essence</td>
+      <td>3.50% drop rate from Blessed Maiden Boss</td>
+      <td>Crafting Blessed Maiden (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Glacier Remnant</td>
+      <td>2.65%–4.15% drop rate from Ice Queen Boss</td>
+      <td>Crafting Ice Queen (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Golden Essence</td>
+      <td>1.5%–2.5% drop rate from King Of Heroes</td>
+      <td>Crafting King Of Heroes (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Infinity Core</td>
+      <td>3% drop rate from Limitless Sorcerer</td>
+      <td>Crafting Limitless Sorcerer (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Jade Tablet</td>
+      <td>6% drop rate to be obtained from Qin Shi boss on Boss Island</td>
+      <td>Crafting Qin Shi (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Legendary Chest</td>
+      <td>Dropped from any Enemy in the Game</td>
+      <td>Drops money, gems and other items.</td>
+    </tr>
+    <tr>
+      <td class="item-name">Lunar Essence</td>
+      <td>2.85% base drop rate from Moon Slayer Boss</td>
+      <td>Crafting Moon Slayer (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Malevolent Soul</td>
+      <td>2%-3% drop rate from Strongest In History</td>
+      <td>Crafting Strongest In History (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Monarch Essence</td>
+      <td>TBA% drop rate from Shadow Monarch</td>
+      <td>Crafting Shadow Monarch (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Mythril</td>
+      <td>0.5% – 1.5% drop rate from enemies on Desert Island or above</td>
+      <td>Enchanting and Blessing</td>
+    </tr>
+    <tr>
+      <td class="item-name">Passive Shard</td>
+      <td>Dropped from Every Enemy In-Game</td>
+      <td>Rolling Passives</td>
+    </tr>
+    <tr>
+      <td class="item-name">Power Shard</td>
+      <td>Dropped from Ninja Island and Lawless Island Enemies</td>
+      <td>Rolling Powers</td>
+    </tr>
+    <tr>
+      <td class="item-name">Radiant Core</td>
+      <td>2% drop rate from Madoka in Boss Rush, Previously in Valentine Island</td>
+      <td>Crafting Love Maiden (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Raid Key</td>
+      <td>Defeating Sea 2 NPC</td>
+      <td>Starting Raids</td>
+    </tr>
+    <tr>
+      <td class="item-name">Reaper Key</td>
+      <td>0.1% drop rate from Ghoul Member at Isolation Island</td>
+      <td>Spawning Black Reaper boss</td>
+    </tr>
+    <tr>
+      <td class="item-name">Reaper Remnant</td>
+      <td>TBA% drop rate from Black Reaper Boss</td>
+      <td>To obtain Black Reaper spec</td>
+    </tr>
+    <tr>
+      <td class="item-name">Reiatsu Core</td>
+      <td>3% drop rate from Manipulator boss</td>
+      <td>Crafting Manipulator (Sword), True Manipulator (Sword) and getting Ascension IV</td>
+    </tr>
+    <tr>
+      <td class="item-name">Relic Part 1</td>
+      <td>Dropped by Delinquent NPCs</td>
+      <td>Crafting Damage Relic and Crit Chance Relic</td>
+    </tr>
+    <tr>
+      <td class="item-name">Relic Part 2</td>
+      <td>Dropped by Delinquent NPCs</td>
+      <td>Crafting Crit Chance Relic</td>
+    </tr>
+    <tr>
+      <td class="item-name">Relic Part 3</td>
+      <td>Dropped by Strong Fighter NPCs</td>
+      <td>Crafting Damage Relic and Crit Damage Relic</td>
+    </tr>
+    <tr>
+      <td class="item-name">Relic Part 4</td>
+      <td>Dropped by Strong Fighter NPCs</td>
+      <td>Crafting Crit Damage Relic</td>
+    </tr>
+    <tr>
+      <td class="item-name">Rush Key</td>
+      <td>Dropped from any Enemy or Boss in-game or bought from Merchant</td>
+      <td>Starting Boss Rush</td>
+    </tr>
+    <tr>
+      <td class="item-name">Sacred Bow</td>
+      <td>4% drop rate from Madoka in Boss Rush, Previously in Valentine Island</td>
+      <td>Crafting Love Maiden (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Shadow Essence</td>
+      <td>2%–4.5% drop rate from from Shadow Boss</td>
+      <td>Crafting Shadow (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Shadow Remnant</td>
+      <td>TBA% drop rate from Atomic Boss</td>
+      <td>Crafting Atomic (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Silent Storm</td>
+      <td>TBA% drop rate from Yamato Boss</td>
+      <td>Crafting Yamato (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Silver Requiem</td>
+      <td>3.5% drop rate from Dragon Slayer Boss in Christmas Island</td>
+      <td>Crafting Dragon Slayer (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Six Eye</td>
+      <td>6%-8% drop rate from Strongest Of Today</td>
+      <td>Consumed to craft Strongest Of Today (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Slime Remnant</td>
+      <td>15% drop rate to be obtained from Demon Lord (Boss) on Slime Island</td>
+      <td>Crafting Slime (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Soul Amulet</td>
+      <td>8% drop rate from Solo Hunter (Boss)</td>
+      <td>Crafting Solo Hunter (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Spirit Key</td>
+      <td></td>
+      <td>Spawning Spirit Warrior Boss</td>
+    </tr>
+    <tr>
+      <td class="item-name">Spiritual Core</td>
+      <td>1.75% drop rate from Soul Reaper</td>
+      <td>Crafting Soul Reaper (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Tempest Relic</td>
+      <td>Dropped from any NPC</td>
+      <td>Spawning Blessed Maiden and crafting Blessed Maiden (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Tempest Seal</td>
+      <td>5.50%-7.50% drop rate from Demon Lord (Boss)</td>
+      <td>Crafting Slime Sword at the Slime Trainer NPC</td>
+    </tr>
+    <tr>
+      <td class="item-name">Time Remnant</td>
+      <td>TBA% drop rate from The World (Boss)</td>
+      <td>Crafting The World (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Tower Key</td>
+      <td></td>
+      <td>Starting Infinite Tower</td>
+    </tr>
+    <tr>
+      <td class="item-name">Upper Seal</td>
+      <td>~1% base drop rate from most NPCs</td>
+      <td>Spawning Moon Slayer Boss and crafting Moon Slayer (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Void Seed</td>
+      <td>4.5%–15% drop rate from Shadow Boss</td>
+      <td>Crafting Shadow (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Yamato Essence</td>
+      <td>2.5% drop rate from Yamato Boss</td>
+      <td>Crafting Yamato</td>
+    </tr>
+</tbody>
+</table>
+
+<h2 class="section-title">Mythical Items <span class="rarity-badge badge-mythical">Mythical</span></h2>
+<table class="db-table">
+<thead><tr><th style="width:22%">Name</th><th style="width:40%">Obtainment</th><th style="width:38%">Utility</th></tr></thead>
+<tbody>
+    <tr>
+      <td class="item-name">Adamantite</td>
+      <td>Defeat Enemies from Snow Island and Above</td>
+      <td>Enchanting and Blessing</td>
+    </tr>
+    <tr>
+      <td class="item-name">Atomic Core</td>
+      <td>TBA% drop rate from Shadow Boss</td>
+      <td>Crafting Shadow (Sword) and getting Ascension V</td>
+    </tr>
+    <tr>
+      <td class="item-name">Atomic Omen</td>
+      <td>TBA% drop rate from Atomic Boss</td>
+      <td>Crafting Atomic (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Azure Heart</td>
+      <td>TBA% drop rate from Yamato Boss</td>
+      <td>Crafting Yamato (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Blood Ring</td>
+      <td>TBA% drop rate from Vampire King boss</td>
+      <td>Crafting Vampire King (Melee) getting Ascension IV and VI</td>
+    </tr>
+    <tr>
+      <td class="item-name">Casuli</td>
+      <td>TBA% drop rate from Vampire King boss</td>
+      <td>Crafting Vampire King (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Conqueror Fragment</td>
+      <td></td>
+      <td>Obtaining Conqueror Haki</td>
+    </tr>
+    <tr>
+      <td class="item-name">Corrupt Crown</td>
+      <td>TBA% drop rate from Corrupted Knight</td>
+      <td>Crafting Corrupted Excalibur (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Corruption Core</td>
+      <td>TBA% drop rate from Corrupted Knight</td>
+      <td>Crafting Corrupted Excalibur (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Crimson Heart</td>
+      <td>TBA% drop rate from Curse King Boss</td>
+      <td>Crafting Curse King (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Cursed Flesh</td>
+      <td>0.65%–0.9% Drop chance from Strongest in History Boss</td>
+      <td>Crafting Strongest In History (Melee) and the Infinity Domain Shard used to master Strongest Of Today (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Destruction Eye</td>
+      <td>TBA% drop rate from Demon King (Boss)</td>
+      <td>Crafting Demon King (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Diamond</td>
+      <td>Low drop rate from most NPCs</td>
+      <td>Enchanting and Blessing</td>
+    </tr>
+    <tr>
+      <td class="item-name">Eminence Essence</td>
+      <td>TBA% drop rate from Atomic Boss</td>
+      <td>Crafting Atomic (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Eternal Core</td>
+      <td>1.5% base drop rate from Strongest Shinobi Boss</td>
+      <td>Crafting Strongest Shinobi (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Frozen Brand</td>
+      <td>TBA% drop rate from Ice Queen (Boss)</td>
+      <td>Crafting Ice Queen (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Evolution Fragment</td>
+      <td>TBA% drop rate from True Manipulator</td>
+      <td>Crafting True Manipulator (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Galaxy Shard</td>
+      <td>TBA% drop rate from Cosmic Being (Boss)</td>
+      <td>Crafting Cosmic Being (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Ghoul Essence</td>
+      <td></td>
+      <td>Crafting Black Reaper (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Hogyoku Fragment</td>
+      <td>Drops from Manipulator boss at Hollow Island</td>
+      <td>Crafting Manipulator (Sword) and getting Ascension V</td>
+    </tr>
+    <tr>
+      <td class="item-name">Ice Core</td>
+      <td>0.5% base drop rate from Ice Queen (Boss)</td>
+      <td>Crafting Ice Queen (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Imperial Seal</td>
+      <td>TBA% drop rate from Qin Shi Boss</td>
+      <td>Crafting Qin Shi (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Infinity Essence</td>
+      <td>TBA% drop rate from Strongest Of Today</td>
+      <td>Crafting Strongest Of Today (Melee) and the Shrine Domain shard used to master Strongest In History (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Kamish Dagger</td>
+      <td>TBA% drop rate from Shadow Monarch</td>
+      <td>Crafting Shadow Monarch (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Magic Essence</td>
+      <td>TBA% drop rate from Great Mage Boss</td>
+      <td>Crafting Great Mage (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Mana Core</td>
+      <td>Drops from Great Mage boss at Easter Island</td>
+      <td>Crafting Great Mage Sword</td>
+    </tr>
+    <tr>
+      <td class="item-name">Monster Pulse</td>
+      <td></td>
+      <td>Crafting</td>
+    </tr>
+    <tr>
+      <td class="item-name">Moon Crest</td>
+      <td>0.45% drop rate from Moon Slayer Boss</td>
+      <td>Crafting Moon Slayer (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Mythical Chest</td>
+      <td>Low drop rate from any NPC</td>
+      <td>Can be opened for Legendary or Mythical items, Gems and Coins, Race, Trait and Haki Color rerolls</td>
+    </tr>
+    <tr>
+      <td class="item-name">Path Fragment</td>
+      <td>x% drop rate from Strongest Shinobi Boss</td>
+      <td>Crafting Strongest Shinobi (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Phantasm Core</td>
+      <td>TBA% drop rate from King Of Heroes</td>
+      <td>Crafting King Of Heroes (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Relic Part 5</td>
+      <td>Dropped by the Strong Bandit NPCs at Bizarre Island</td>
+      <td>Crafting Luck Relic</td>
+    </tr>
+    <tr>
+      <td class="item-name">Relic Part 6</td>
+      <td>Dropped by the Strong Bandit NPCs at Bizarre Island</td>
+      <td>Crafting Luck Relic</td>
+    </tr>
+    <tr>
+      <td class="item-name">Relic Part 7</td>
+      <td>Dropped by the Fast Ninja NPCs at Punch Island</td>
+      <td>Crafting Damage Relic</td>
+    </tr>
+    <tr>
+      <td class="item-name">Relic Part 8</td>
+      <td>Dropped by the Fast Ninja NPCs at Punch Island</td>
+      <td>Crafting Damage Relic</td>
+    </tr>
+    <tr>
+      <td class="item-name">Rinkaku Core</td>
+      <td></td>
+      <td>Crafting Black Reaper (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Slime Core</td>
+      <td>TBA% drop rate from Demon Lord (Boss)</td>
+      <td>Crafting Slime (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Soul Flame</td>
+      <td></td>
+      <td>Crafting Soul Reaper and Ascension</td>
+    </tr>
+    <tr>
+      <td class="item-name">Spirit Stone</td>
+      <td></td>
+      <td>Spirit Warior</td>
+    </tr>
+    <tr>
+      <td class="item-name">Transcendent Core</td>
+      <td>TBA% drop rate from True Manipulator</td>
+      <td>Crafting True Manipulator (Sword)</td>
+    </tr>
+    <tr>
+      <td class="item-name">Vampire Omen</td>
+      <td>0.25% base drop rate from The World Boss</td>
+      <td>Crafting The World (Melee)</td>
+    </tr>
+    <tr>
+      <td class="item-name">World Core</td>
+      <td>0.60% base drop rate from The World Boss</td>
+      <td>Crafting The World (Melee)</td>
+    </tr>
+</tbody>
+</table>
+
+<h2 class="section-title">Secret Items <span class="rarity-badge badge-secret">Secret</span></h2>
+<table class="db-table">
+<thead><tr><th style="width:22%">Name</th><th style="width:40%">Obtainment</th><th style="width:38%">Utility</th></tr></thead>
+<tbody>
+    <tr>
+      <td class="item-name">Aura Crate</td>
+      <td>Extremely low drop rate from any NPC or Codes</td>
+      <td>Can be opened to roll an Aura</td>
+    </tr>
+    <tr>
+      <td class="item-name">Cosmetic Crate</td>
+      <td>Extremely low drop rate from any NPC or Codes</td>
+      <td>Can be opened to roll a Cosmetic</td>
+    </tr>
+    <tr>
+      <td class="item-name">Guild Key</td>
+      <td>Extremely low drop rate from any Sea 2 NPC</td>
+      <td>Can be used to create a Guild</td>
+    </tr>
+    <tr>
+      <td class="item-name">Secret Chest</td>
+      <td>0.02% drop rate from any NPC in the game or Codes</td>
+      <td>Can be opened for tons of rare items, gems, and coins.</td>
+    </tr>
+</tbody>
+</table>
+    </article>
+    <footer style="margin-top:56px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--border);padding-top:16px">
+      Sailor Piece Wiki v2 — Fan-made. Last updated June 2025.
+    </footer>
+  </main>
+
+  <aside class="sidebar-right">
+    <div class="right-card"><h4>On this page</h4><ul class="toc-list" id="toc-list"><li style="color:var(--muted);font-size:.85rem">Loading…</li></ul></div>
+    <div class="right-card"><h4>Page Info</h4><div class="right-kv"><div><span>Entries</span><strong>164</strong></div><div><span>Rarities</span><strong>6</strong></div><div><span>Type</span><strong>Items</strong></div></div></div>
+    <div class="right-card"><h4>Rarity Key</h4><div style="font-size:.82rem;line-height:1.9;color:#b9c8e2">
+      <span style="color:var(--common)">● Common</span><br>
+      <span style="color:var(--uncommon)">● Uncommon</span><br>
+      <span style="color:var(--rare)">● Rare</span><br>
+      <span style="color:var(--epic)">● Epic</span><br>
+      <span style="color:var(--legendary)">● Legendary</span><br>
+      <span style="color:var(--mythical)">● Mythical</span><br>
+      <span style="color:#f472b6">● Secret</span>
+    </div></div>
+    <div class="right-card"><h4>Related Pages</h4><ul class="related-links"><li><a href="swords.html">→ Swords</a></li><li><a href="melee.html">→ Fighting Styles</a></li></ul></div>
+  </aside>
+</div>
+<script src="assets/wiki.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a132a26c8ad90cfd',t:'MTc4MjcxMjAyNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
